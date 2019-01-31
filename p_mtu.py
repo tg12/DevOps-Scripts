@@ -73,7 +73,7 @@ def parse_args():
     # 68 or 576 for IPv4, 1280 for IPv6
     p.add_argument('-l', metavar='MTU', dest='lo', type=int, default=0,
                    help='lower bound of the search range [%(default)s]')
-    p.add_argument('-u', metavar='MTU', destpyth='hi', type=int, default=1500,
+    p.add_argument('-u', metavar='MTU', dest='hi', type=int, default=1500,
                    help='upper bound of the search range [%(default)s]')
     p.add_argument(
         '-c',
