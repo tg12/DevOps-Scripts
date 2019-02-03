@@ -29,7 +29,7 @@ for ip in ips:
         print (str(count) + "/" + str(len(ips)))
         iptables_rule = str("-A OUTPUT -s " + str(ip) + "/32 -d 0/0 -j DROP") 
         raw_rules_set_dist.append(iptables_rule)
-        iptables_rule = " -A OUTPUT -s " + str(ip) + "/32 -d 0/0 -j LOG --log-prefix 'firehol-iptables-rule-js'"
+        iptables_rule = "-A OUTPUT -s " + str(ip) + "/32 -d 0/0 -j LOG --log-prefix 'firehol-iptables-rule-js'"
         raw_rules_set_dist.append(iptables_rule)
         # print(datetime.datetime.now().time())
     except Exception as e: 
